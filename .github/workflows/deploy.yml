@@ -35,7 +35,7 @@ env:
   ECR_REPOSITORY: infinite-loop-ecr           # ✅ your ECR repo name
   ECS_SERVICE: app-test-service-g6kdm271       # ✅ your ECS service name
   ECS_CLUSTER: infinite-loop-cluster       # ✅ your ECS cluster name
-  ECS_TASK_DEFINITION: task-definition.json # ✅ path in repo
+  ECS_TASK_DEFINITION: app-test.json # ✅ path in repo
   CONTAINER_NAME: infintepress           # ✅ container name in task-definition.json
 
 permissions:
@@ -87,6 +87,7 @@ jobs:
         service: ${{ env.ECS_SERVICE }}
         cluster: ${{ env.ECS_CLUSTER }}
         wait-for-service-stability: true
+
 
 
 
