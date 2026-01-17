@@ -1,29 +1,86 @@
 {
-  "family": "app-test",
-  "networkMode": "awsvpc",
-  "requiresCompatibilities": ["FARGATE"],
-  "cpu": "1024",
-  "memory": "2048",
-  "executionRoleArn": "arn:aws:iam::757760338065:role/ecsTaskExecutionRole",
-  "containerDefinitions": [
-    {
-      "name": "infintepress",
-      "image": "REPLACE_ME",
-      "essential": true,
-      "portMappings": [
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:757760338065:task-definition/app-test:1",
+    "containerDefinitions": [
         {
-          "containerPort": 80,
-          "protocol": "tcp"
+            "name": "infintepress",
+            "image": "demo",
+            "cpu": 1024,
+            "memory": 2048,
+            "memoryReservation": 1024,
+            "portMappings": [
+                {
+                    "name": "infinite-port",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/",
+                    "awslogs-create-group": "true",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            },
+            "systemControls": []
         }
-      ],
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/app-test",
-          "awslogs-region": "us-east-1",
-          "awslogs-stream-prefix": "ecs"
+    ],
+    "family": "app-test",
+    "executionRoleArn": "arn:aws:iam::757760338065:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
         }
-      }
-    }
-  ]
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "MANAGED_INSTANCES",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "2048",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2026-01-17T12:39:55.442Z",
+    "registeredBy": "arn:aws:iam::757760338065:root",
+    "enableFaultInjection": false,
+    "tags": []
 }
