@@ -50,8 +50,6 @@ GitHub → GitHub Actions
 
 ## 🚀 Architecture Diagram
 
-<img width="1536" height="1024" alt="ChatGPT Image Jan 18, 2026, 10_13_10 AM" src="https://github.com/user-attachments/assets/b628b1dc-6036-4c46-b0aa-18b05a090e49" />
-
-
+<img width="1536" height="1024" alt="ChatGPT Image Jan 18, 2026, 10_14_31 AM" src="https://github.com/user-attachments/assets/214e9125-7c43-4157-9cb1-51c61772cffe" />
 
 
