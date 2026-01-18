@@ -21,7 +21,7 @@ The application used is the **Infinite Loop** static HTML template from Tooplate
 │   └── workflows/
 │       └── deploy.yml
 └── README.md
-
+```
 
 ---
 
