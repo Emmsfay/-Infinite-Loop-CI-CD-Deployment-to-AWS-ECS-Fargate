@@ -4,6 +4,25 @@ This project demonstrates a **fully automated CI/CD pipeline** for a containeriz
 
 The application used is the **Infinite Loop** static HTML template from Tooplate, served using **Nginx** in a Docker container.
 
+
+---
+
+## 📂 Project Structure
+
+```text
+.
+├── css/
+├── img/
+├── js/
+├── index.html
+├── Dockerfile
+├── task-definition.json
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+└── README.md
+
+
 ---
 
 ## 🚀 Architecture Overview
@@ -29,17 +48,10 @@ GitHub → GitHub Actions
 
 ---
 
-## 📂 Project Structure
+## 🚀 Architecture Diagram
 
-```text
-.
-├── css/
-├── img/
-├── js/
-├── index.html
-├── Dockerfile
-├── task-definition.json
-├── .github/
-│   └── workflows/
-│       └── deploy.yml
-└── README.md
+<img width="1536" height="1024" alt="ChatGPT Image Jan 18, 2026, 10_13_10 AM" src="https://github.com/user-attachments/assets/b628b1dc-6036-4c46-b0aa-18b05a090e49" />
+
+
+
+
